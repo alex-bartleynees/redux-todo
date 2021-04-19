@@ -15,12 +15,10 @@ describe('reducer tests', () => {
             completed: false
         }
     ];
-    
+
    Object.freeze(stateBefore)
    Object.freeze(stateAfter)
 
-    expect(
-        todos(stateBefore, action)
-        ).toEqual(stateAfter)
+    expect(todos(stateBefore, action)).toEqual(stateAfter)
 })
 })
