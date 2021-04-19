@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Wombats from './Wombats'
+import ToDo from './ToDo'
 
 function App (props) {
   return (
     <div>
-      <Wombats store={props.store} />
+      <ToDo store={props.store} />
     </div>
   )
 }
