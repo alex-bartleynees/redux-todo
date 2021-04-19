@@ -1,11 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
+import { combineReducers, createStore } from 'redux'
 
 import App from './components/App'
-import wombatReducer from './reducer'
+import {todos, visibilityFilter} from './reducer'
 
-const store = createStore(wombatReducer,
+const todoApp = combineReducers({
+  todos,
+  visibilityFilter,
+})
+
+const store = createStore(todoApp,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
