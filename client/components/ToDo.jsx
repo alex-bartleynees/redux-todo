@@ -45,7 +45,11 @@ function ToDo(props) {
       </form>
       <ul>
         {todos.map((todo) =>
-          <li onClick={() => toggle(todo.id)} style={{textDecoration: todo.completed ? 'line-through' : 'none'}} key={todo.id}>{todo.text}</li>
+          <li onClick={() => toggle(todo.id)} 
+          style={{textDecoration: todo.completed ? 'line-through' : 'none'}} 
+          key={todo.id}>
+            {todo.text}
+            </li>
         )}
       </ul>
     </div>
